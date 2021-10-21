@@ -1,8 +1,53 @@
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto+Mono&display=swap');
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  /* COLORS */
+  --color-primary: #ff9800;
+  --color-header-text: #202329;
+  --color-main-text: #e0ffff;
+  --color-background-header: #fff;
+  --color-background-main: #24282f;
+  --color-background-card: #3c3e44;
+
+  /* FONT */
+  --font-family-headline: 'Roboto Mono', monospace;
+  --font-family-text: 'Lato', sans-serif;
+
+  /* BORDERS */
+  --border-radius: 15px;
+}
+
+body {
+  font-family: var(--font-family-text);
+  margin: 0;
+  background-color: var(--color-background-main);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--font-family-headline);
+}
+
+.header {
+  background-color: var(--color-background-header);
+  color: var(--color-header-text);
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  padding: 4rem 2rem;
+}
+
+.main {
+  display: grid;
+  row-gap: 1rem;
+  background-color: var(--color-background-main);
+  color: var(--color-main-text);
+  padding: 2rem 2rem;
 }
