@@ -17,29 +17,45 @@ function renderApp() {
     ]
   );
 
+  const characters = [
+    {
+      name: 'Public Opinion Judge',
+      imgSrc: 'https://rickandmortyapi.com/api/character/avatar/514.jpeg',
+      status: 'Alive',
+      race: 'Human',
+      lastKnownLocation: 'Earth (Replacement Dimension)',
+      firstSeenIn: 'Edge of Tomorty: Rick, Die, Rickpeat',
+    },
+
+    {
+      name: 'Baby Legs',
+      imgSrc: 'https://rickandmortyapi.com/api/character/avatar/29.jpeg',
+      status: 'Alive',
+      race: 'Human',
+      lastKnownLocation: 'Interdimensional Cable',
+      firstSeenIn: 'Rixty Minutes',
+    },
+
+    {
+      name: 'Insurance Rick',
+      imgSrc: 'https://rickandmortyapi.com/api/character/avatar/164.jpeg',
+      status: 'Unknown',
+      race: 'Human',
+      lastKnownLocation: 'Citadel of Ricks',
+      firstSeenIn: 'Close Rick-counters of the Rick Kind',
+    },
+  ];
+
+  const characterCards = characters.map((character) =>
+    createCharacterCard(character)
+  );
+
   const mainElement = createElement(
     'main',
     {
       className: 'main',
     },
-    [
-      createCharacterCard({
-        name: 'Public Opinion Judge',
-        imgSrc: 'https://rickandmortyapi.com/api/character/avatar/514.jpeg',
-        status: 'Alive',
-        race: 'Human',
-        lastKnownLocation: 'Earth (Replacement Dimension)',
-        firstSeenIn: 'Edge of Tomorty: Rick, Die, Rickpeat',
-      }),
-      createCharacterCard({
-        name: 'Baby Legs',
-        imgSrc: 'https://rickandmortyapi.com/api/character/avatar/29.jpeg',
-        status: 'Alive',
-        race: 'Human',
-        lastKnownLocation: 'Interdimensional Cable',
-        firstSeenIn: 'Rixty Minutes',
-      }),
-    ]
+    characterCards
   );
 
   appElement.append(headerElement, mainElement);
