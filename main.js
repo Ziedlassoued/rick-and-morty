@@ -23,11 +23,22 @@ function renderApp() {
       className: 'main',
     },
     [
-      createCharacterCard({ name: 'Rick' }),
-      createCharacterCard({ name: 'Morty' }),
-      createCharacterCard({ name: 'Morty' }),
-      createCharacterCard({ name: 'Morty' }),
-      createCharacterCard({ name: 'Morty' }),
+      createCharacterCard({
+        name: 'Public Opinion Judge',
+        imgSrc: 'https://rickandmortyapi.com/api/character/avatar/514.jpeg',
+        status: 'Alive',
+        race: 'Human',
+        lastKnownLocation: 'Earth (Replacement Dimension)',
+        firstSeenIn: 'Edge of Tomorty: Rick, Die, Rickpeat',
+      }),
+      createCharacterCard({
+        name: 'Baby Legs',
+        imgSrc: 'https://rickandmortyapi.com/api/character/avatar/29.jpeg',
+        status: 'Alive',
+        race: 'Human',
+        lastKnownLocation: 'Interdimensional Cable',
+        firstSeenIn: 'Rixty Minutes',
+      }),
     ]
   );
 
