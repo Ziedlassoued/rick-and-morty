@@ -2,7 +2,9 @@ import { createElement } from '../lib/elements';
 import styles from './searchElement.module.css';
 
 export default function createSearchElement(onSubmit) {
-  const textInput = createElement('input', { typ: 'submit' });
+  const textInput = createElement('input', {
+    placeholder: 'Search for a character',
+  });
   const searchElement = createElement(
     'form',
     {
@@ -12,7 +14,7 @@ export default function createSearchElement(onSubmit) {
       },
       className: styles.searchElement,
     },
-    [textInput, createElement('input', { typ: 'submit' })]
+    [textInput, createElement('input', { type: 'submit' })]
   );
   return searchElement;
 }
