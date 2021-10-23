@@ -13,15 +13,6 @@ export default function createCharacterCard({
 
   const firstEpisodeElement = createElement('p', { textContent: 'Loading...' });
 
-  let statusColor = '';
-  if (status === 'Alive') {
-    statusColor = styles.statusAlive;
-  } else if (status === 'Dead') {
-    statusColor = styles.statusDead;
-  } else {
-    statusColor = styles.statusUnknown;
-  }
-
   const CharacterCard = createElement(
     'article',
     {
@@ -30,7 +21,6 @@ export default function createCharacterCard({
     [
       createElement('img', { className: styles.img, src: image, alt: '' }),
       createElement('h2', { textContent: name }),
-      createElement('div', { className: statusColor, textContent: '' }),
       createElement('p', { textContent: `${status} - ${species}` }),
       createElement('h3', { textContent: 'Last known location:' }),
       createElement('p', { textContent: lastKnownLocation }),
