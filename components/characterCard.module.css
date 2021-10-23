@@ -1,9 +1,10 @@
 .card {
   display: grid;
   grid-template-columns: auto 1fr;
-  background-color: aqua;
+  background-color: lightcyan;
   column-gap: 1rem;
   border-radius: 2rem;
+  box-shadow: 0 4px 4px 0 rgba(4, 4, 4, 4), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .img {
@@ -23,4 +24,33 @@
 
 .card > * :nth-child(odd) {
   align-self: start;
+}
+
+/* .statusBar {
+  display: flex;
+  align-items: center;
+} */
+
+.statusAlive {
+  background-color: green;
+  height: 0.5em;
+  width: 0.5em;
+  border-radius: 50%;
+  margin-right: 0.375em;
+}
+
+.statusDead {
+  background-color: red;
+  height: 0.5em;
+  width: 0.5em;
+  border-radius: 50%;
+  margin-right: 0.375em;
+}
+
+.statusUnknown {
+  background-color: gray;
+  height: 0.5em;
+  width: 0.5em;
+  border-radius: 50%;
+  margin-right: 0.375em;
 }
