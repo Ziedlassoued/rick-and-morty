@@ -1,6 +1,7 @@
 import { createElement } from './lib/elements';
 import './style.css';
 import createCharacterCard from './components/characterCard';
+import createSearchElement from './components/searchElement';
 import { fetchCharacters } from './lib/character';
 
 async function renderApp() {
@@ -17,6 +18,7 @@ async function renderApp() {
       }),
     ]
   );
+  const searchElement = createSearchElement();
 
   const characters = await fetchCharacters();
 
@@ -29,7 +31,7 @@ async function renderApp() {
     {
       className: 'main',
     },
-    characterCards
+    [searchElement, ...characterCards]
   );
 
   appElement.append(headerElement, mainElement);
