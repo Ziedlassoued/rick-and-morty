@@ -14,7 +14,7 @@ async function renderApp() {
     },
     [
       createElement('h1', {
-        textContent: 'Rick and Morty',
+        textContent: 'Rick & Morty',
       }),
     ]
   );
@@ -49,8 +49,23 @@ async function renderApp() {
     },
     characterCards
   );
+  const onclick = function () {
+    window.scrollTo(0, 0);
+  };
+  const footerElement = createElement(
+    'footer',
+    {
+      className: 'footer',
+    },
+    [
+      createElement('button', {
+        textContent: 'Rick & Morty',
+        onclick: onclick,
+      }),
+    ]
+  );
 
-  appElement.append(headerElement, searchElement, mainElement);
+  appElement.append(headerElement, searchElement, mainElement, footerElement);
 }
 
 renderApp();

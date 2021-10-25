@@ -1,7 +1,7 @@
 .card {
   display: grid;
   grid-template-columns: auto 1fr;
-  background-color: lightcyan;
+  background-color: #f0e14a;
   column-gap: 1rem;
   border-radius: 2rem;
   box-shadow: 0 4px 4px 0 rgba(4, 4, 4, 4), 0 6px 20px 0 rgba(0, 0, 0, 0.19);

@@ -1,5 +1,5 @@
 .searchElemen {
-  display: grid;
+  display: flex;
   padding: 1rem;
   grid-template-columns: 1fr 5rem;
 }

@@ -11,8 +11,8 @@
   --color-primary: #ff9800;
   --color-header-text: #202329;
   --color-main-text: black;
-  --color-background-header: #fff;
-  --color-background-main: #24282f;
+  --color-background-header: #f08e4a;
+  --color-background-main: #4af0e1;
   --color-background-card: #3c3e44;
 
   /* FONT */
@@ -38,6 +38,7 @@ h5 {
 }
 
 .header {
+  font-size: 50px;
   background-color: var(--color-background-header);
   color: var(--color-header-text);
   text-align: center;
@@ -51,4 +52,9 @@ h5 {
   background-color: var(--color-background-main);
   color: var(--color-main-text);
   padding: 2rem 2rem;
+}
+
+.footer {
+  display: grid;
+  align-items: center;
 }
